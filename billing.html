@@ -220,6 +220,7 @@
 
             <div class="form-group">
                 <label for="postcode" class="form-label">Postcode/Zip*</label>
+                <span id="postcode-error" class="error-message"></span>
                 <input type="text" id="postcode" class="form-input" required>
             </div>
             <div class="name-section">
@@ -328,7 +329,7 @@
             var postcodeError = document.getElementById("postcode-error");
 
 
-            var validZipCodes = ["12345", "67890", "54321"];
+            var validZipCodes = ["560063", "560030", "560034", "560030", , "560007", "560092", "560024", "562106", "560045", "560050", "560003"];
 
             if (!validZipCodes.includes(postcodeInput.value)) {
                 postcodeError.innerText = "Invalid postcode/zip code.";
