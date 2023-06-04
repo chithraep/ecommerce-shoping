@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'>
+
+    </script>
+
+</head>
+
+<body>
+    <nav>
+
+        <div class="url">HOME>LIVING>SOFAS>FABRIC SOFA</div>
+        <div class="url1"> RETURN TO PREVIOUS PAGE </div>
+
+    </nav>
+    <div class="flex-box">
+        <div class="left">
+
+
+            <div class="big-img">
+                <img src="IMG-20230602-WA0017.jpg" alt="">
+            </div>
+            <div class="images">
+                <div class="small-img">
+                    <img src="IMG-20230602-WA00171.jpg" onclick="showImg(this.src)">
+                </div>&nbsp;
+                <div class="small-img">
+                    <img src="IMG-20230602-WA0023.jpg" onclick="showImg(this.src)">
+                </div>&nbsp;
+                <div class="small-img">
+                    <img src="IMG-20230602-WA0023.jpg" onclick="showImg(this.src)">
+                </div>&nbsp;
+                <div class="small-img">
+                    <img src="IMG-20230602-WA0022.jpg" onclick="showImg(this.src)">
+                </div>&nbsp;
+                <div class="small-img">
+                    <img src="767.jpg.jpg" onclick="showImg(this.src)">
+                </div>&nbsp;
+                <div class="small-img">
+                    <img src="IMG-20230602-WA0021L.jpg" onclick="showImg(this.src)">
+                </div>&nbsp;
+                <div class="small-img">
+                    <img src="IMG-20230602-WA0015.jpg" onclick="showImg(this.src)">
+                </div>&nbsp;
+                <div class="small-img">
+                    <img src="IMG-20230602-WA0021L.jpg" onclick="showImg(this.src)">
+                </div>
+                &nbsp;
+                <div class="small-img">
+                    <img src="IMG-20230602-WA0015.jpg" onclick="showImg(this.src)">
+                </div>
+                &nbsp;
+                <div class="small-img">
+                    <img src="IMG-20230602-WA0023.jpg" onclick="showImg(this.src)">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="right">
+
+
+            <div class="fname">AFIFA BROWN SOFA
+                <p class="text-muted">Fabric Sofa,Living,Sofas</p>
+            </div><br><br>
+
+
+            <div class="price"> <i class="fa-thin fa-square">5,555.00</i> - <i class="fa-thin fa-square">25,553.0</i>
+            </div><br>
+            <select id="state" class="form-select" required>
+                <option value="">Choose an Option </option>
+                <option value="CA">5000-10000</option>
+                <option value="NY">10000-20000</option>
+                <option value="TX">20000-25553</option>
+
+            </select>
+            <div class="shop-header">
+                <input type="text" placeholder="Available at 560086" id="shop-input" />
+                <button id="ad-btn">AddNow</button>
+            </div>
+            <div class="fname1">
+                <p class="text-muted">Delivered By </p>
+                <p class="thick">Wed 21 st Nov</p>
+
+            </div>
+            <br>
+            <div class="qty">
+                <p>Qty</p><br>
+                <button id="sub">-</button>
+                <input type="text" id="qtyBox" readonly="" value="0">
+                <button id="add">+</button>
+            </div>
+            <br>
+            <div class="btn btn-primary">ADD CART
+            </div><br>
+
+            <div class="whish">
+                <p> <i class='far fa-heart'></i>&nbsp Add to wishlist</p>
+            </div>
+            <br>
+            <div class="last">
+                <p>SKU:
+                <p class="light">N/A</p>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        let bigImg = document.querySelector('big-img img');
+        function showImg(pic) {
+            bigImg.src = pic;
+        }
+        let addBtn = document.querySelector('#add');
+        let subBtn = document.querySelector('#sub');
+        let qty = document.querySelector('#qtyBox');
+        addBtn.addEventListener('click', () => {
+            qty.value = parseInt(qty.value) + 1;
+        });
+
+        subBtn.addEventListener('click', () => {
+            if (qty.value <= 0) {
+                qty.value <= 0;
+            } else {
+                qty.value = parseInt(qty.value) - 1;
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
